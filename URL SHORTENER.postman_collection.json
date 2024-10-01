@@ -1,0 +1,35 @@
+{
+	"info": {
+		"name": "URL SHORTENER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "URL GENERATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"longUrl\": \"https://www.example.com/some/very/long/url\",\r\n  \"expiryDate\": \"2024-12-31T23:59:59\",\r\n  \"customShortUrl\": \"custom\"  // optional\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/url/shorten"
+			},
+			"response": []
+		},
+		{
+			"name": "GET URL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://custom.decx.in:8080"
+			},
+			"response": []
+		}
+	]
+}
